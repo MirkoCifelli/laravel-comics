@@ -1,5 +1,17 @@
 @import "~bootstrap/scss/bootstrap";
 
+
+
+header{
+    .img-logo{
+        width: 100px;
+        height: 100px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
 main {
     background-color: lightcoral;
 }
@@ -13,3 +25,4 @@ main {
     background-image: url('../img/gatto.webp');
     background-size: contain;
 }
+
