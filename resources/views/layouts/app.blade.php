@@ -7,6 +7,13 @@ $iconMain = [
     'buy-comics-subscriptions.png',
     'buy-dc-power-visa.png',
 ];
+$iconName=[
+    'DIGITAL COMICS',
+    'DC MERCHANDISE',
+    'SUBSCRIPTION',
+    'COMIC SHOP LOCATOR',
+    'DC POWER VISA'
+]
 @endphp
 
 
@@ -67,9 +74,12 @@ $iconMain = [
                         <div class="col p-3">
                             <ul class="list-unstyled d-flex justify-content-between  ms-3">
                                 @foreach ($iconMain as $single)
+                                
                                    <li class="m-2">
                                        <img src="{{ Vite::asset('resources/img/'.$single) }}" alt=""> 
+                                       
                                    </li>
+                                
                                 @endforeach    
                            </ul>
                         </div>

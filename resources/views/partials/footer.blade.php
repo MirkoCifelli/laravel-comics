@@ -49,14 +49,29 @@ $socialFooter =[
     <div class="footer-top">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <ul>
-                        @foreach ($linkFooter as $link)
-                        {{-- <li>
-                            {{ $link }}
-                        </li> --}}
+                <div class="col-6">
+                    <ul class=" d-flex flex-wrap">
+                        @foreach($linkFooter as $key => $link)
+                        <li class="m-3">
+                            <h4 class=" text-white ">
+                                {{$key}}
+                            </h4>
+                            <ul class="list-unstyled">
+                                @foreach($link as $key=> $singleLink)
+                                <li class="color-list">
+                                    {{$singleLink}}
+                                </li>
+                                @endforeach
+                            </ul>
+                        </li>
                         @endforeach
                     </ul>
+                    <p class="color-list p-4" >
+                        All Site Content TIM and 2020 DC Entertaiment, unless otherwise noted here. ALl rights reserverd.<br>Cookies Settigs
+                    </p>
+                </div>
+                <div class="col-6 img-col-dc">
+
                 </div>
             </div>
         </div>

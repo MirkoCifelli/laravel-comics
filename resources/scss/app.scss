@@ -54,11 +54,11 @@ main {
         
     }
     .button-special{
-            
+
                 background-color: #0282F9;
                 border: none;
                 color: white;
-                padding: 15px;
+                padding: 5px 40px;
                 text-align: center;
                 text-decoration: none;
                 font-size: 16px;    
@@ -80,6 +80,8 @@ main {
 footer {
     .footer-top {
         background-image: url("../img/footer-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .footer-bottom {
         background-color: #303030;
@@ -96,5 +98,13 @@ footer {
                 height: 100%;
             }
         }
+    }
+    .color-list{
+        color: darkgray;
+    }
+    .img-col-dc{
+        background-image: url("../img/dc-logo-bg.png");
+        background-repeat: no-repeat;
+        // background-size: cover;
     }
 }
