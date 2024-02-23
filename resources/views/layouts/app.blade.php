@@ -1,3 +1,15 @@
+@php
+$comics = config('comics');
+$iconMain = [
+    'buy-comics-digital-comics.png',
+    'buy-comics-merchandise.png',
+    'buy-comics-shop-locator.png',
+    'buy-comics-subscriptions.png',
+    'buy-dc-power-visa.png',
+];
+@endphp
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,26 +31,50 @@
         @include('partials.header')
 
         <main>
-            <div class="container">
+            <div class="container-fluid jumbotron"></div>
 
-                <div class="row">
-
-                    <div class="col">
-
-                        <div>
-                            <img class="gatto-img" src="{{ Vite::asset('resources/img/gatto.webp') }}" alt="Gatto">
-                        </div>
-
-                        <div class="gatto-bg">
-                            QUESTO DIV AVRA' COME SFONDO IL GATTO
-                        </div>
-
-                        @yield('main-content')
-
+            <div class="container-fluid bg-card">
+                <div class="container p-5">
+                    <div class="row">
+                        @foreach ($comics as $singleComic)
+                            <div class="col-2 p-5">
+                                
+                                 <div class="card">
+                                    <div class="img-card">
+                                        <img src="{{$singleComic['thumb']}}" alt="">
+                                    </div>
+                                    <div class="info-card">
+                                        {{$singleComic['title']}}
+                                    </div>
+                                 </div>
+                            </div>
+                        @endforeach
                     </div>
-
                 </div>
-
+                <div class="container">
+                   <div class="row p-4 ">
+                    <div class="col d-flex  justify-content-center ">
+                        <button class="button-special">
+                            LOAD MORE
+                        </button>
+                    </div>
+                   </div>
+                </div>
+            </div>
+            <div class="container-fluid bg-blue">
+                <div class="container">
+                    <div class="row">
+                        <div class="col p-3">
+                            <ul class="list-unstyled d-flex justify-content-between  ms-3">
+                                @foreach ($iconMain as $single)
+                                   <li class="m-2">
+                                       <img src="{{ Vite::asset('resources/img/'.$single) }}" alt=""> 
+                                   </li>
+                                @endforeach    
+                           </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 

@@ -3,57 +3,71 @@
         [
             'url' => '/',
             'label' => 'Characters',
-            'active' => false,
+            
         ],
         [
             'url' => '/comics',
             'label' => 'Comics',
-            'active' => true,
+            
         ],
         [
             'url' => '/movie',
             'label' => 'Movie',
-            'active' => false,
+            
         ],
         [
             'url' => '/tv',
             'label' => 'TV',
-            'active' => false,
+            
         ],
         [
             'url' => '/games',
             'label' => 'Games',
-            'active' => false,
+            
         ],
         [
             'url' => '/collectibles',
             'label' => 'Collectibles',
-            'active' => false,
+            
         ],
         [
             'url' => '/videos',
             'label' => 'Videos',
-            'active' => false,
+            
         ],
         [
             'url' => '/fans',
             'label' => 'Fans',
-            'active' => false,
+            
         ],
         [
             'url' => '/news',
             'label' => 'News',
-            'active' => false,
+            
         ],
         [
             'url' => '/shop',
             'label' => 'Shop',
-            'active' => false,
+            
         ]
  ];
 @endphp
 
 <header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-end ">
+                    <div>
+                        DC POWER VISA
+                    </div>
+                    <div class="ms-3">
+                        ADDITIONAL DS SITES
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-2">
@@ -64,18 +78,13 @@
             <div class="col-8">
                 
                     <nav>
-                        <ul class="d-flex justify-content-between list-unstyled p-4">
+                        <ul class="d-flex justify-content-between list-unstyled p-4 ">
                             @foreach ($links as $link)
-                                <li class="m-2">
-                                    @if ($link['active'])
-                                        <a href="{{ $link['url'] }}" class=" text-uppercase ">
+                                <li class="m-2 ">
+                                    
+                                    <a href="{{ $link['url'] }}" class=" text-uppercase text-decoration-none text-dark">
                                             {{ $link['label'] }}
-                                        </a>
-                                    @else
-                                        <del class="text-uppercase">
-                                            {{ $link['label'] }}
-                                        </del>
-                                    @endif
+                                    </a>
                                 </li>
                             @endforeach
                         </ul>
